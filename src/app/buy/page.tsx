@@ -287,7 +287,7 @@ export default function BuyPage() {
         {/* Step 1: Select Cryptocurrency */}
         {step === 1 && (
           <div className="bg-white rounded-xl shadow-md p-6">
-            <h2 className="text-2xl font-bold mb-6">Select Cryptocurrency</h2>
+            <h2 className="text-2xl font-bold mb-6 text-gray-900">Select Cryptocurrency</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {Object.keys(CRYPTO_CONFIG.SUPPORTED_CRYPTOS).map((crypto) => (
                 <button
@@ -316,8 +316,8 @@ export default function BuyPage() {
         {/* Step 2: Select Network */}
         {step === 2 && (
           <div className="bg-white rounded-xl shadow-md p-6">
-            <h2 className="text-2xl font-bold mb-2">Select Network</h2>
-            <p className="text-gray-600 mb-6">Selected: {selectedCrypto}</p>
+            <h2 className="text-2xl font-bold mb-2 text-gray-900">Select Network</h2>
+            <p className="text-gray-700 mb-6">Selected: {selectedCrypto}</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {getNetworksForCrypto(selectedCrypto).map((network) => (
                 <button
@@ -344,8 +344,8 @@ export default function BuyPage() {
         {/* Step 3: Select Receiving Method */}
         {step === 3 && (
           <div className="bg-white rounded-xl shadow-md p-6">
-            <h2 className="text-2xl font-bold mb-2">How would you like to receive your crypto?</h2>
-            <p className="text-gray-600 mb-6">
+            <h2 className="text-2xl font-bold mb-2 text-gray-900">How would you like to receive your crypto?</h2>
+            <p className="text-gray-700 mb-6">
               Selected: {selectedCrypto} - {selectedNetwork}
             </p>
             
@@ -386,7 +386,7 @@ export default function BuyPage() {
             <div className="flex gap-4">
               <button
                 onClick={goBack}
-                className="flex-1 px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-50"
+                className="flex-1 px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 text-gray-700"
               >
                 Back
               </button>
@@ -403,8 +403,8 @@ export default function BuyPage() {
         {/* Step 4: Enter Amount */}
         {step === 4 && (
           <div className="bg-white rounded-xl shadow-md p-6">
-            <h2 className="text-2xl font-bold mb-2">Enter Amount</h2>
-            <p className="text-gray-600 mb-6">
+            <h2 className="text-2xl font-bold mb-2 text-gray-900">Enter Amount</h2>
+            <p className="text-gray-700 mb-6">
               {selectedCrypto} - {selectedNetwork} - {receivingMethod}
             </p>
             
@@ -417,7 +417,7 @@ export default function BuyPage() {
                 value={amount}
                 onChange={(e) => handleAmountChange(e.target.value)}
                 placeholder={`Enter amount in ${selectedCrypto}`}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-800 placeholder-gray-500"
                 step="0.00000001"
                 min="0"
               />
@@ -458,7 +458,7 @@ export default function BuyPage() {
             <div className="flex gap-4">
               <button
                 onClick={goBack}
-                className="flex-1 px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-50"
+                className="flex-1 px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 text-gray-700"
               >
                 Back
               </button>
@@ -476,7 +476,7 @@ export default function BuyPage() {
         {/* Step 5: Payment */}
         {step === 5 && orderCalculation && (
           <div className="bg-white rounded-xl shadow-md p-6">
-            <h2 className="text-2xl font-bold mb-6">Complete Your Order</h2>
+            <h2 className="text-2xl font-bold mb-6 text-gray-900">Complete Your Order</h2>
 
             {/* Order Summary */}
             <div className="bg-gray-50 rounded-lg p-6 mb-6">
@@ -527,7 +527,7 @@ export default function BuyPage() {
 
             {/* Receiving Information */}
             <div className="mb-6">
-              <h3 className="font-semibold mb-4">Receiving Information</h3>
+              <h3 className="font-semibold mb-4 text-gray-900">Receiving Information</h3>
               {receivingMethod === 'Binance' && (
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -538,7 +538,7 @@ export default function BuyPage() {
                     value={binanceUid}
                     onChange={(e) => setBinanceUid(e.target.value)}
                     placeholder="Enter your Binance UID"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-800 placeholder-gray-500"
                   />
                   <p className="text-sm text-gray-500 mt-1">
                     Your Binance UID can be found in your Binance profile settings
@@ -556,7 +556,7 @@ export default function BuyPage() {
                     value={walletAddress}
                     onChange={(e) => setWalletAddress(e.target.value)}
                     placeholder={`Enter your ${selectedCrypto} ${selectedNetwork} receiving address`}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-800 placeholder-gray-500"
                   />
                   <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mt-2">
                     <p className="font-semibold">⚠️ Important:</p>
@@ -571,7 +571,7 @@ export default function BuyPage() {
 
             {/* Payment Methods */}
             <div className="mb-6">
-              <h3 className="font-semibold mb-4">Select Payment Method</h3>
+              <h3 className="font-semibold mb-4 text-gray-900">Select Payment Method</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <button
                   onClick={() => handlePaymentMethod('CBE')}
@@ -636,7 +636,7 @@ export default function BuyPage() {
             <div className="flex gap-4">
               <button
                 onClick={goBack}
-                className="flex-1 px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-50"
+                className="flex-1 px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 text-gray-700"
               >
                 Back
               </button>
@@ -654,7 +654,7 @@ export default function BuyPage() {
         {/* Step 6: Payment Proof and Email */}
         {step === 6 && orderCalculation && (
           <div className="bg-white rounded-xl shadow-md p-6">
-            <h2 className="text-2xl font-bold mb-6">Final Step: Upload Payment Proof</h2>
+            <h2 className="text-2xl font-bold mb-6 text-gray-900">Final Step: Upload Payment Proof</h2>
 
             {/* Order Summary */}
             <div className="bg-gray-50 rounded-lg p-6 mb-6">
@@ -701,7 +701,7 @@ export default function BuyPage() {
 
             {/* Customer Information */}
             <div className="mb-6">
-              <h3 className="font-semibold mb-4">Your Information</h3>
+              <h3 className="font-semibold mb-4 text-gray-900">Your Information</h3>
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -712,7 +712,7 @@ export default function BuyPage() {
                     value={customerEmail}
                     onChange={(e) => setCustomerEmail(e.target.value)}
                     placeholder="Enter your email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-800 placeholder-gray-500"
                   />
                   <p className="text-sm text-gray-500 mt-1">
                     You will receive an email when your order is completed
@@ -723,12 +723,12 @@ export default function BuyPage() {
 
             {/* Payment Proof Upload */}
             <div className="mb-6">
-              <h3 className="font-semibold mb-4">Upload Payment Screenshot</h3>
+              <h3 className="font-semibold mb-4 text-gray-900">Upload Payment Screenshot</h3>
               <input
                 type="file"
                 accept=".jpg,.jpeg,.png,.pdf"
                 onChange={handleFileUpload}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-800"
               />
               <p className="text-sm text-gray-500 mt-1">
                 Accepted formats: JPG, JPEG, PNG, PDF (max 5MB)
@@ -743,7 +743,7 @@ export default function BuyPage() {
             <div className="flex gap-4">
               <button
                 onClick={goBack}
-                className="flex-1 px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-50"
+                className="flex-1 px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 text-gray-700"
               >
                 Back
               </button>
