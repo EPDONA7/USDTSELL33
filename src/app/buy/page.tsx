@@ -425,30 +425,30 @@ export default function BuyPage() {
 
             {orderCalculation && (
               <div className="bg-blue-50 rounded-lg p-6 mb-6">
-                <h3 className="font-semibold mb-4">Order Summary</h3>
+                <h3 className="font-semibold mb-4 text-gray-800">Order Summary</h3>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
-                    <span>Crypto Amount:</span>
-                    <span className="font-semibold">{orderCalculation.cryptoAmount} {selectedCrypto}</span>
+                    <span className="text-gray-700">Crypto Amount:</span>
+                    <span className="font-semibold text-gray-800">{orderCalculation.cryptoAmount} {selectedCrypto}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>USDT Equivalent:</span>
-                    <span className="font-semibold">{orderCalculation.usdtEquivalent} USDT</span>
+                    <span className="text-gray-700">USDT Equivalent:</span>
+                    <span className="font-semibold text-gray-800">{orderCalculation.usdtEquivalent} USDT</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Exchange Rate:</span>
-                    <span>1 {selectedCrypto} = {orderCalculation.exchangeRate} ETB</span>
+                    <span className="text-gray-700">Exchange Rate:</span>
+                    <span className="text-gray-800">1 {selectedCrypto} = {orderCalculation.exchangeRate} ETB</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Crypto Value:</span>
-                    <span className="font-semibold">{orderCalculation.baseEtbAmount} ETB</span>
+                    <span className="text-gray-700">Crypto Value:</span>
+                    <span className="font-semibold text-gray-800">{orderCalculation.baseEtbAmount} ETB</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Fee:</span>
-                    <span className="font-semibold">{orderCalculation.fee} ETB</span>
+                    <span className="text-gray-700">Fee:</span>
+                    <span className="font-semibold text-gray-800">{orderCalculation.fee} ETB</span>
                   </div>
                   <div className="border-t pt-2 mt-2 flex justify-between">
-                    <span className="font-semibold">Total to Pay:</span>
+                    <span className="font-semibold text-gray-800">Total to Pay:</span>
                     <span className="font-bold text-lg text-blue-600">{orderCalculation.totalEtbAmount} ETB</span>
                   </div>
                 </div>
@@ -480,46 +480,46 @@ export default function BuyPage() {
 
             {/* Order Summary */}
             <div className="bg-gray-50 rounded-lg p-6 mb-6">
-              <h3 className="font-semibold mb-4">Order Summary</h3>
+              <h3 className="font-semibold mb-4 text-gray-800">Order Summary</h3>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
-                  <span>Cryptocurrency:</span>
-                  <span className="font-semibold">{selectedCrypto}</span>
+                  <span className="text-gray-700">Cryptocurrency:</span>
+                  <span className="font-semibold text-gray-800">{selectedCrypto}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Network:</span>
-                  <span className="font-semibold">{selectedNetwork}</span>
+                  <span className="text-gray-700">Network:</span>
+                  <span className="font-semibold text-gray-800">{selectedNetwork}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Amount:</span>
-                  <span className="font-semibold">{orderCalculation.cryptoAmount} {selectedCrypto}</span>
+                  <span className="text-gray-700">Amount:</span>
+                  <span className="font-semibold text-gray-800">{orderCalculation.cryptoAmount} {selectedCrypto}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Receiving Method:</span>
-                  <span className="font-semibold">{receivingMethod}</span>
+                  <span className="text-gray-700">Receiving Method:</span>
+                  <span className="font-semibold text-gray-800">{receivingMethod}</span>
                 </div>
                 {receivingMethod === 'Binance' && (
                   <div className="flex justify-between">
-                    <span>Binance UID:</span>
-                    <span className="font-semibold">{binanceUid}</span>
+                    <span className="text-gray-700">Binance UID:</span>
+                    <span className="font-semibold text-gray-800">{binanceUid}</span>
                   </div>
                 )}
                 {receivingMethod === 'Wallet Address' && (
                   <div className="flex justify-between">
-                    <span>Wallet Address:</span>
-                    <span className="font-semibold text-xs">{walletAddress.slice(0, 20)}...{walletAddress.slice(-10)}</span>
+                    <span className="text-gray-700">Wallet Address:</span>
+                    <span className="font-semibold text-gray-800 text-xs">{walletAddress.slice(0, 20)}...{walletAddress.slice(-10)}</span>
                   </div>
                 )}
                 <div className="flex justify-between">
-                  <span>Crypto Value:</span>
-                  <span className="font-semibold">{orderCalculation.baseEtbAmount} ETB</span>
+                  <span className="text-gray-700">Crypto Value:</span>
+                  <span className="font-semibold text-gray-800">{orderCalculation.baseEtbAmount} ETB</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Fee:</span>
-                  <span className="font-semibold">{orderCalculation.fee} ETB</span>
+                  <span className="text-gray-700">Fee:</span>
+                  <span className="font-semibold text-gray-800">{orderCalculation.fee} ETB</span>
                 </div>
                 <div className="border-t pt-2 mt-2 flex justify-between">
-                  <span className="font-semibold">Total to Pay:</span>
+                  <span className="font-semibold text-gray-800">Total to Pay:</span>
                   <span className="font-bold text-lg text-blue-600">{orderCalculation.totalEtbAmount} ETB</span>
                 </div>
               </div>
@@ -658,42 +658,42 @@ export default function BuyPage() {
 
             {/* Order Summary */}
             <div className="bg-gray-50 rounded-lg p-6 mb-6">
-              <h3 className="font-semibold mb-4">Order Summary</h3>
+              <h3 className="font-semibold mb-4 text-gray-800">Order Summary</h3>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
-                  <span>Cryptocurrency:</span>
-                  <span className="font-semibold">{selectedCrypto}</span>
+                  <span className="text-gray-700">Cryptocurrency:</span>
+                  <span className="font-semibold text-gray-800">{selectedCrypto}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Network:</span>
-                  <span className="font-semibold">{selectedNetwork}</span>
+                  <span className="text-gray-700">Network:</span>
+                  <span className="font-semibold text-gray-800">{selectedNetwork}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Amount:</span>
-                  <span className="font-semibold">{orderCalculation.cryptoAmount} {selectedCrypto}</span>
+                  <span className="text-gray-700">Amount:</span>
+                  <span className="font-semibold text-gray-800">{orderCalculation.cryptoAmount} {selectedCrypto}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Receiving Method:</span>
-                  <span className="font-semibold">{receivingMethod}</span>
+                  <span className="text-gray-700">Receiving Method:</span>
+                  <span className="font-semibold text-gray-800">{receivingMethod}</span>
                 </div>
                 {receivingMethod === 'Binance' && (
                   <div className="flex justify-between">
-                    <span>Binance UID:</span>
-                    <span className="font-semibold">{binanceUid}</span>
+                    <span className="text-gray-700">Binance UID:</span>
+                    <span className="font-semibold text-gray-800">{binanceUid}</span>
                   </div>
                 )}
                 {receivingMethod === 'Wallet Address' && (
                   <div className="flex justify-between">
-                    <span>Wallet Address:</span>
-                    <span className="font-semibold text-xs">{walletAddress.slice(0, 20)}...{walletAddress.slice(-10)}</span>
+                    <span className="text-gray-700">Wallet Address:</span>
+                    <span className="font-semibold text-gray-800 text-xs">{walletAddress.slice(0, 20)}...{walletAddress.slice(-10)}</span>
                   </div>
                 )}
                 <div className="flex justify-between">
-                  <span>Payment Method:</span>
-                  <span className="font-semibold">{paymentMethod}</span>
+                  <span className="text-gray-700">Payment Method:</span>
+                  <span className="font-semibold text-gray-800">{paymentMethod}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Total to Pay:</span>
+                  <span className="text-gray-700">Total to Pay:</span>
                   <span className="font-semibold text-lg text-blue-600">{orderCalculation.totalEtbAmount} ETB</span>
                 </div>
               </div>
