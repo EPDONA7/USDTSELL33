@@ -7,17 +7,17 @@ export const CRYPTO_CONFIG = {
     USDT: {
       name: 'USDT',
       networks: ['TRC20', 'BEP20'],
-      rate: '195', // 1 USDT = 195 ETB
+      rate: '206', // 1 USDT = 206 ETB
     },
     LTC: {
       name: 'LTC',
       networks: ['Litecoin'],
-      rate: '8863.6363', // 1 LTC = 8,863.6363 ETB (calculated from 0.022 LTC = 195 ETB)
+      rate: '9363.6363', // 1 LTC = 9,363.6363 ETB (calculated from 0.022 LTC = 206 ETB)
     },
     TRX: {
       name: 'TRX',
       networks: ['TRC20'],
-      rate: '65.4362', // 1 TRX = 65.4362 ETB (calculated from 2.98 TRX = 195 ETB)
+      rate: '69.1275', // 1 TRX = 69.1275 ETB (calculated from 2.98 TRX = 206 ETB)
     },
   },
 
@@ -70,11 +70,11 @@ export function calculateUSDTEquivalent(crypto: string, amount: string): string 
   if (!config) return '0';
   
   // Calculate USDT equivalent based on the rate
-  // Since all rates are based on 195 ETB, we normalize to USDT
+  // Since all rates are based on 206 ETB, we normalize to USDT
   const amountDecimal = new Decimal(amount);
   const rateDecimal = new Decimal(config.rate);
   const etbValue = amountDecimal.mul(rateDecimal);
-  return etbValue.div(new Decimal('195')).toFixed(2); // Convert back to USDT equivalent
+  return etbValue.div(new Decimal('206')).toFixed(2); // Convert back to USDT equivalent
 }
 
 export function calculateFee(usdtEquivalent: string, receivingMethod: string): string {
